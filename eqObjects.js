@@ -21,7 +21,6 @@ const eqObjects = function(object1, object2) {
       return false;
     }
   }
-  console.log(`${object1} & ${object2} are equal`)
   return true;
 };
 
