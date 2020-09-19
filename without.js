@@ -1,8 +1,26 @@
-const assertArraysEqual = function(source, itemsToRemove) {
-  if (without(source, itemsToRemove)) {
-    console.log(`🕺🕺🕺 Assertion Passed: ${source} === ${itemsToRemove}`);
-  } else if (!eqArrays(source, itemsToRemove)) {
-    console.log(`🤦🤦🤦 Assertion Failed: ${source} !== ${itemsToRemove}`);
+/*Steps:
+// 1. Trying to create a loop that will iterate between both arrays 
+// until it finds a match
+// 2. Once match found, remove match and start over again until no match found*/
+
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length) {
+    return false;
+  } else {
+    for (let i in actual) {
+      if (actual[i] !== expected[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+};
+
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`🕺🕺🕺 Assertion Passed: ${JSON.stringify(actual)} === ${JSON.stringify(expected)}`);
+  } else if (!eqArrays(actual, expected)) {
+    console.log(`🤦🤦🤦 Assertion Failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
   }
 };
 
@@ -23,16 +41,12 @@ const without = function(source, itemsToRemove){
     return newArray;
 }
 
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]) // => ["1", "2"]
 
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
+//const words = ["hello", "world", "lighthouse"];
+//onsole.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+//assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 
-/*Steps:
-// 1. Trying to create a loop that will iterate between both arrays 
-// until it finds a match
-// 2. Once match found, remove match and start over again until no match found*/
