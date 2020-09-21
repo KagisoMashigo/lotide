@@ -27,4 +27,4 @@ const findKey = function(object, callBack){
 
 assertEqual(findKey(movies, x => movies[stars] === 2));
 
-findKey(movies, x => x.stars === 2) // => "noma"
+findKey(movies, x => x.stars === 2) // => "noma, supposed to return this but returning undefined"
