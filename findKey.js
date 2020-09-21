@@ -1,3 +1,5 @@
+const assertEqual = require('./assertEqual');
+
 const movies = {
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
@@ -7,24 +9,17 @@ const movies = {
   "Akelarre":  { stars: 3 }
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🕺🕺🕺 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🤦🤦🤦 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-const findKey = function(object, callBack){
+const findKey = function(object, callBack) {
   for (let key in object){
-    if (object[key] === callBack){
+    if (callBack(object[key])) {
       return key;
     } 
   }
   return undefined;
 } 
 
-assertEqual(findKey(movies, x => movies[stars] === 2));
+assertEqual(findKey(movies, x => x.stars === 2), "noma");
+//assertEqual(findKey(movies, "noma"));
 
-findKey(movies, x => x.stars === 2) // => "noma, supposed to return this but returning undefined"
+
+findKey(movies, x => x.stars === 2) // => "noma", supposed to return this but returning undefined"

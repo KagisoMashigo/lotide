@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@iso_mash/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project was created and published by me as part of my learnings at Lighthouse Labs.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,12 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/KagisoMashigo/lotide.git"
   },
-  "author": "",
+  "author": "Kagiso Mashigo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KagisoMashigo/lotide/issues"
+    "url": "https://github.com/KagisoMashigo"
   },
-  "homepage": "https://github.com/KagisoMashigo/lotide#readme",
+  "homepage": "https://github.com/KagisoMashigo",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.1.3"
