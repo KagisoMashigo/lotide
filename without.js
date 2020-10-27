@@ -28,25 +28,17 @@ const assertArraysEqual = function(actual, expected) {
 const without = function(source, itemsToRemove){
   let newArray = [...source];
   for (let i = 0; i < itemsToRemove.length; i++){ 
-    //console.log("source at [i]", source[i])
     for (let j = 0; j < newArray.length; j++){
-      //console.log("Source [j]", source[j])
       if (newArray[j] === itemsToRemove[i]) {
         newArray.splice([j], 1);
         j--;
-       // console.log("splice action", newArray.splice([j], 1));
        }
       } 
     } 
     return newArray;
 }
 
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
+assertArraysEqual(without([1, 1, 2, 1, 3], [1]), [2, 3]) // => [2, 3]
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]) // => ["1", "2"]
-
-//const words = ["hello", "world", "lighthouse"];
-//onsole.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-//assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 
