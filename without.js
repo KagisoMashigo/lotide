@@ -24,7 +24,6 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-
 const without = function(source, itemsToRemove){
   let newArray = [...source];
   for (let i = 0; i < itemsToRemove.length; i++){ 
