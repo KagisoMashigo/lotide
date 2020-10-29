@@ -1,30 +1,11 @@
-const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length) {
-    return false;
-  } else {
-    for (let i in actual) {
-      if (actual[i] !== expected[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`🕺🕺🕺 Assertion Passed: ${JSON.stringify(actual)} === ${JSON.stringify(expected)}`);
-  } else if (!eqArrays(actual, expected)) {
-    console.log(`🤦🤦🤦 Assertion Failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
-  }
-};
-
-// this function needs to take in a string
 const countLetters = function(string) {
   let counter = {};
   for (let char of string) {
-    if (char !== " ") {// it must ignore spaces " "
-    if (counter[char]) { //if this character is already a key in object the next code block adds +1 to the value
+    if (char !== " ") {
+    if (counter[char]) { 
       counter[char] += 1; 
     } else {
       counter[char] = 1;

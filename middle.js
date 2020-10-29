@@ -1,20 +1,19 @@
 const eqArrays = require('./eqArrays');
 const assertArraysEqual = require('./assertArraysEqual');
 
-const middle = function(arr) {
+const middle = function(array) {
   let startIndex = 1;
   let endIndex = 0;
-  if (arr.length > 2) {
-    if (arr.length % 2 === 1) {
-      startIndex = Math.floor(arr.length / 2);
-      endIndex = Math.floor(arr.length / 2) + 1; 
+  if (array.length > 2) {
+    if (array.length % 2 === 1) {
+      startIndex = Math.floor(array.length / 2);
+      endIndex = Math.floor(array.length / 2) + 1; 
     } else {
-      startIndex = arr.length / 2 - 1;
-      endIndex = arr.length / 2 + 1;
+      startIndex = array.length / 2 - 1;
+      endIndex = array.length / 2 + 1;
     }
   }
-
-  const result = arr.slice(startIndex, endIndex);
+  const result = array.slice(startIndex, endIndex);
   return result;
 };
 
