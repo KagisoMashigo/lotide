@@ -11,6 +11,9 @@ const map = function(array, callback) {
   return results;
 }
 
+module.exports = map;
+
+
 const array = ["g", "c", "t", "m", "t"];
 
 assertArraysEqual(map([1, 3, 5], word => word[0]), [1, 3, 5]);

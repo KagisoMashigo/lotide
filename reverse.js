@@ -1,3 +1,4 @@
+
 const args = process.argv.slice(2);
 
 const reverseString = (str) => { // arrow fcts alwasy still need to be defined
@@ -19,5 +20,8 @@ const loopThroughElements = (array) => {
   }
   return reversedStrings;
 };
+
+module.exports = reverseString;
+
 
 console.log(loopThroughElements(args));

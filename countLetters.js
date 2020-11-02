@@ -14,6 +14,9 @@ const countLetters = function(string) {
   } return counter;// it must then return the object
 }
 
+module.exports = countLetters;
+
+
 assertArraysEqual(countLetters("lighthouse in the house"), {
   l: 1,
   i: 2,
