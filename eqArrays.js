@@ -18,6 +18,3 @@ const eqArrays = function(actual, expected) {
 };
 
 module.exports = eqArrays;
-
-// we're checking to see if the valuels of the below arrays are =//
-// we're creating a loop to loop through both arrays and see if they return the same vaules//
