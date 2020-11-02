@@ -1,6 +1,3 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 const letterPositions = function(sentence) {
     const results = {};
     const lowerCase = sentence.toLowerCase();
@@ -17,7 +14,3 @@ const letterPositions = function(sentence) {
   };
 
 module.exports = letterPositions;
-
-
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2, 3]);

@@ -1,4 +1,3 @@
-
 const args = process.argv.slice(2);
 
 const reverseString = (str) => { // arrow fcts alwasy still need to be defined

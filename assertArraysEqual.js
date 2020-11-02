@@ -9,3 +9,7 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 module.exports = assertArraysEqual;
+
+// TEST CODE
+// assertArraysEqual([1, 4, 5], [1, 3, 5]);
+// assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
