@@ -28,7 +28,20 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented along with their corresopnding test files:
 
-* `assertArraysEqual(...)`: compares two arrays or objects and remarks whether equal or not
 * `head(...)`: returns first value of an array
 * `middle(...)`: returns middle value of an array
 * `tail(...)`: returns end value of an array
+* `flatten(...)`: merges nested arrays
+* `letterPositions(...)`: returns the positions of a particular letter in a string
+* `map(...)`: returns first character of strings in an array
+* `mergeArrays(...)`: returns merged arrays
+* `takeUntil(...)`: stores values in an object as specified
+* `without(...)`: returns an array without particular elements
+* `countOnly(...)`: counts specific values and stores in an object
+* `countLetters(...)`: counts the occurance of a char and adds value to object
+* `findKey(...)`: finds key in an objects based on requirements
+* `findKeyByValue(...)`: finds value of the aforementioned function
+
+
+
+
